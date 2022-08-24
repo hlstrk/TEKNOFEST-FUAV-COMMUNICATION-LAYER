@@ -166,7 +166,7 @@ def ucaktan_veri_cekme(ws, message):  # missiondan çekilen veriler
             print(str(misson_web_socket.status_code))
             rakip_iha_verileri = misson_web_socket.json()
         elif misson_web_socket.status_code == 401:
-            print("ilk önce oturum aç oç")
+            print("İlk önce hakem sunucusunda önce oturum açın")
         else:
             rakip_iha_verileri = "hata"
             print("Hakeme gidecek verilerde hata var!")
@@ -407,7 +407,7 @@ def hakem_oturum_ac():
          print(32323232)    
 
     else:
-        return("siktir len, 2 defa oturum mu açılır amk. ya da kesin sen şimdi şifreyi yanlış yazmışsınıdr.", 400)
+        return("Hakem oturum hatası. Şifreyi kontrol edin....", 400)
 
 
 # yer istasyonuna gonderilern veriler/bizim telmetri
